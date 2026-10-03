@@ -1,0 +1,24 @@
+#gp-assistant-widget{position:fixed;bottom:18px;right:18px;z-index:9999;font-family:Arial,sans-serif;color:#f4f5fa;font-size:14px}
+#gp-assistant-widget button{font:inherit;cursor:pointer}
+#gp-assistant-toggle{display:flex;align-items:center;gap:10px;justify-content:center;border:1px solid #f02c50;border-radius:30px;padding:13px 19px;color:#fff;background:#f02c50;box-shadow:0 8px 30px #0005;min-height:48px}
+#gp-assistant-toggle>span:first-child{font-size:27px;line-height:1}
+#gp-assistant-toggle>img{width:46px;height:56px;object-fit:contain;border-radius:8px;background:#f0f2f8}
+#gp-assistant-widget .gp-assistant-mascot{display:flex;align-items:center;gap:18px;padding:14px 20px;background:#151d2c;border-bottom:1px solid #ffffff1a;flex-shrink:0}
+#gp-assistant-widget .gp-assistant-mascot img{width:100px;height:120px;object-fit:contain;background:#f0f2f8;border-radius:12px}
+#gp-assistant-widget .gp-assistant-mascot strong{font-size:20px}
+#gp-assistant-widget .gp-assistant-mascot p{color:#bdc5d6;margin:8px 0 0}
+#gp-assistant-panel{position:absolute;right:0;bottom:70px;width:min(560px,calc(100vw - 36px));height:min(780px,calc(90dvh - 70px));display:flex;flex-direction:column;overflow:hidden;background:#0c101a;border:1px solid #394254;border-radius:16px;box-shadow:0 18px 65px #0008}
+#gp-assistant-panel[hidden]{display:none}
+#gp-assistant-widget .gp-assistant-header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;background:#151d2c;border-bottom:1px solid #ffffff1a}
+#gp-assistant-widget .gp-assistant-header>div{display:flex;align-items:center;gap:10px}
+#gp-assistant-close{width:40px;height:40px;color:#f4f5fa;background:#202a3c;border:0;border-radius:8px;font-size:26px!important}
+#gp-assistant-frame{display:block;flex:1;width:100%;min-height:0;border:0;background:#080b12}
+#gp-assistant-widget .gp-assistant-external{display:block;text-align:center;color:#bdc5d6;padding:12px;text-decoration:none;font-size:12px;background:#151d2c;border-top:1px solid #ffffff1a}
+@media(max-width:600px){#gp-assistant-widget{bottom:12px;right:12px}#gp-assistant-panel{width:calc(100vw - 24px);height:calc(100dvh - 110px);max-height:780px;bottom:70px}#gp-assistant-toggle{padding:11px 15px}}
+
+/* Compact launcher and conversation requested by the owner. */
+#gp-assistant-toggle{flex-direction:column;gap:3px;padding:0;background:transparent;border:0;box-shadow:none;border-radius:14px;width:86px;height:116px}
+#gp-assistant-toggle>img{width:76px;height:88px;background:transparent;border-radius:0}
+#gp-assistant-toggle>span{background:#eb454b;border-radius:8px;padding:6px 9px;font-size:13px;line-height:1.3}
+#gp-assistant-panel{width:min(390px,calc(100vw - 24px));height:min(620px,calc(100dvh - 154px));bottom:128px}
+@media(max-width:600px){#gp-assistant-panel{width:calc(100vw - 24px);height:min(620px,calc(100dvh - 150px));bottom:128px}#gp-assistant-toggle{padding:0}}

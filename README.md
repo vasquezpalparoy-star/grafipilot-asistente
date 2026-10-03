@@ -1,6 +1,6 @@
 # Grafipilot · Asistente de impresión
 
-Chat en español con un lobo animado. La conversación se abre al entrar y el lobito permanece visible a su lado. Puede minimizarse y volver a abrirse. La interfaz es oscura y se adapta al celular.
+Chat en español con un lobo animado. Al entrar aparece únicamente un botón pequeño del lobito en la esquina inferior derecha. Al pulsarlo se abre un chat oscuro de hasta 390 px de ancho; se puede cerrar. El lobito dentro del chat también es pequeño. La página del negocio conserva su diseño y sus funciones.
 
 ## Funciones
 
@@ -46,3 +46,7 @@ Las respuestas y tarifas se encuentran en `lib/business-chat.ts`; el historial y
 ## Borrador de revisión
 
 Este cambio se prepara en una rama de revisión: no publica el Site ni agrega un iframe a pagina-web. Conserva el acceso existente del alojamiento. El estado de conexión distingue comprobación, conexión sin IA, IA configurada y error. Las llamadas al chat tienen un límite de espera y muestran una alternativa por WhatsApp si fallan.
+
+## Widget en la página del negocio
+
+`integration/widget.html`, `widget.css` y `widget.js` forman el widget de integración. El iframe se carga solo al abrir el chat y conserva su sesión al cerrarlo. Copiar el lobito a `assets/v1/lobito.png`. El destino lleva `?embed=1`, para abrir la conversación dentro del panel sin otro botón inicial. Antes de integrarlo, desplegar esta versión del asistente. La autenticación existente del alojamiento y la activación de la API se gestionan por separado.
