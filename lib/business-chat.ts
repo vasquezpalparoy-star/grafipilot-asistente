@@ -1,5 +1,5 @@
 import type {Quote} from './quote-chat';
-export const whatsappNumber=''; // Pendiente: número internacional confirmado por el propietario.
+export const whatsappNumber='51952628844'; // Contacto usado por la página Grafiplot.
 export const whatsappLink=(message:string)=>whatsappNumber?`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`:undefined;
 export type RequestState={product?:string;qty?:number;color?:boolean;double?:boolean};
 export type BusinessReply={answer:string;state:RequestState|null;quote?:Quote;handoff?:boolean};
@@ -26,6 +26,7 @@ export const faqs=[
  {keys:['horario horarios atencion abren cierran sabado domingo feriados'],answer:'Atendemos de lunes a viernes de 6:30 a. m. a 9:30 p. m.; sábados de 9 a. m. a 8 p. m.; domingos de 9 a. m. a 9:30 p. m. El documento no indica horarios de feriados.'},
  {keys:['ubicacion direccion donde estan local ubicados universidad unheval uanheval'],answer:'Estamos frente a la puerta principal de la UNHEVAL.'},
  {keys:['pago pagar metodos efectivo yape plin tarjeta transferencia'],answer:'Aceptamos efectivo, Yape y transferencia bancaria. No hay confirmación en el documento sobre tarjetas o Plin.'},
+ {keys:['servicios ofrecen realizan trabajos universitarios copias impresiones stickers stiquers'],answer:'Ofrecemos impresiones y copias, ploteo de planos, gigantografías, anillados y espiralados, tarjetas y stickers, diseño gráfico y trabajos universitarios. Puedo cotizar las opciones con tarifa registrada; los demás servicios se consultan por WhatsApp.',handoff:true},
 ];
 const stop=new Set('que cuanto cuesta cual como el la los las un una de del a en por para puedo tienen hay es se me mi si y o al tu con hacer hacen imprimir impresion impresiones copias fotocopias'.split(' '));
 function near(a:string,b:string){if(a===b)return true;if(a.length<5||b.length<5||Math.abs(a.length-b.length)>1)return false;let prev=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i<=a.length;i++){const row=[i];for(let j=1;j<=b.length;j++)row[j]=Math.min(row[j-1]+1,prev[j]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1));prev=row;}return prev[b.length]<=1;}
